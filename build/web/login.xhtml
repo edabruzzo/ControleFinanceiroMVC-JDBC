@@ -32,15 +32,15 @@
          <p:fieldset>
          <h:panelGrid>
         <p:outputLabel value="LOGIN" for="login"/>
-        <p:inputText  id="login" value="#{loginFilter.usuario.login}" >
+        <p:inputText  id="login" value="#{loginBean.usuario.login}" >
         </p:inputText>
         <p:outputLabel value="PASSWORD" for="password"/>
-        <p:password id="password" value="#{loginFilter.usuario.password}" 
+        <p:password id="password" value="#{loginBean.usuario.password}" 
                     required="true" feedback="true"/>
-        <p:commandButton action="#{loginFilter.criarInfraestrutura()}" 
+        <p:commandButton action="#{loginBean.criarInfraestrutura()}" 
                          value="CRIAR INFRAESTRUTURA - PRIMEIRO ACESSO" id="criaInfra">
         </p:commandButton>
-        <p:commandButton action="#{loginFilter.validaAcesso()}" value="Login" id="validaAcesso"></p:commandButton>
+        <p:commandButton action="#{loginBean.validaAcesso()}" value="Login" id="validaAcesso"></p:commandButton>
         <!--<p:commandButton action="" 
                          value="Solicitar Nova Senha" id="solicitaSenha" 
                          ajax="false" >

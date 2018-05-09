@@ -41,7 +41,7 @@ and open the template in the editor.
          <h:panelGrid columns="2">
           
           <h:outputLabel value="NOME DO LOCAL" for="nome" />
-          <h:inputText id="nome" value="#{localBean.local.nome}" required="true"
+          <h:inputText id="nome" value="#{locaisBean.local.nome}" required="true"
                              requiredMessage="Nome do local é obrigatório!!!"
                              validatorMessage="Nome não pode ser superior a 40">
                     <f:validateLength maximum="40" />
@@ -49,17 +49,17 @@ and open the template in the editor.
            
                <p:fieldset legend ="GRAVAR PROJETO NO LOCAL">
                <h:outputLabel value="SELECIONE O PROJETO A QUE O LOCAL ESTÁ RELACIONADO" for="projeto" />
-               <h:selectOneMenu value="#{localBean.projetoID}" >
-                   <f:selectItems  value="#{localBean.listaProjetos()}" var="projeto"
+               <h:selectOneMenu value="#{locaisBean.projetoID}" >
+                   <f:selectItems  value="#{locaisBean.listaProjetos()}" var="projeto"
                                 itemLabel="#{projeto.nome}" itemValue="#{projeto.id_projeto}" />
                 </h:selectOneMenu>
               <h:commandButton id="gravaProjeto" value="GRAVA PROJETO"  
-                               action="#{localBean.gravaProjetoNoLocal()}">
+                               action="#{locaisBean.gravaProjetoNoLocal()}">
                  
               </h:commandButton>    
                 </p:fieldset>
              
-          <h:commandButton id="criarLocal" value="CRIAR NOVO LOCAL"  action="#{localBean.criaNovoLocal()}">
+          <h:commandButton id="criarLocal" value="CRIAR NOVO LOCAL"  action="#{locaisBean.criaNovoLocal()}">
               </h:commandButton>
          </h:panelGrid>
             </p:fieldset>
@@ -69,7 +69,7 @@ and open the template in the editor.
         
     <f:view>
      <h:form>
-         <p:dataTable id="tabelaLocais" value="#{localBean.listaLocais()}" var="item">
+         <p:dataTable id="tabelaLocais" value="#{locaisBean.listaLocais()}" var="item">
              <f:facet name="header">LOCAIS CADASTRADOS</f:facet>
              <p:column headerText="ID DO LOCAL">
                 <h:outputText value="#{item.id_local}"/>
