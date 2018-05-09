@@ -6,7 +6,7 @@
 
     
     <lifecycle>
-        <phase-listener>Util.LogPhaseListener</phase-listener>
+        <phase-listener>Util.ListenerLogPhase</phase-listener>
     </lifecycle>
     
     

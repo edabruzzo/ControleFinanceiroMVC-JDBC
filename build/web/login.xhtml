@@ -37,9 +37,6 @@
         <p:outputLabel value="PASSWORD" for="password"/>
         <p:password id="password" value="#{loginBean.usuario.password}" 
                     required="true" feedback="true"/>
-        <p:commandButton action="#{loginBean.criarInfraestrutura()}" 
-                         value="CRIAR INFRAESTRUTURA - PRIMEIRO ACESSO" id="criaInfra">
-        </p:commandButton>
         <p:commandButton action="#{loginBean.validaAcesso()}" value="Login" id="validaAcesso"></p:commandButton>
         <!--<p:commandButton action="" 
                          value="Solicitar Nova Senha" id="solicitaSenha" 
@@ -50,7 +47,12 @@
         </p:fieldset>
       </h:form>
         
-  
+       
+       <h:form><p:commandButton action="#{loginBean.criarInfraestrutura()}" 
+                         value="CRIAR INFRAESTRUTURA - PRIMEIRO ACESSO" id="criaInfra">
+        </p:commandButton>
+        </h:form>
+       
    </ui:define>
      </ui:composition>
 </html>
